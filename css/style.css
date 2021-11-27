@@ -1,0 +1,168 @@
+/* Reset ---------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base ---------------*/
+body {
+  background: #fafafa;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #4c4e61;
+}
+
+p {
+  color: #a3a5ae;
+}
+
+/* Components ---------------*/
+main {
+  padding: 5rem 0;
+  width: 85%;
+  max-width: 69.375rem;
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 4.6875rem;
+}
+.intro__heading {
+  font-size: 1.625rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+@media (min-width: 46.875rem) {
+  .intro__heading {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 69.375rem) {
+  .intro__heading {
+    font-size: 2.25rem;
+  }
+}
+.intro__heading span {
+  font-weight: 200;
+  display: block;
+}
+.intro__leading {
+  font-size: 1rem;
+  margin: auto;
+  max-width: 54ch;
+}
+
+.features {
+  display: grid;
+  gap: 1.5625rem;
+  grid-template-areas: "supervisor" "teamBuilder" "karma" "calculator";
+  justify-content: center;
+}
+@media (min-width: 46.875rem) {
+  .features {
+    justify-items: center;
+    grid-template-areas: "supervisor teamBuilder" "karma calculator";
+  }
+}
+@media (min-width: 69.375rem) {
+  .features {
+    gap: 1.875rem;
+    grid-template-areas: "... teamBuilder ..." "supervisor teamBuilder calculator" "supervisor karma calculator" "... karma ...";
+  }
+}
+.features__card {
+  overflow: hidden;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.features__card--cyan {
+  border-top: 5px solid #45d3d3;
+}
+@media (min-width: 69.375rem) {
+  .features__card--cyan {
+    grid-area: supervisor;
+  }
+}
+.features__card--red {
+  border-top: 5px solid #ea5353;
+}
+@media (min-width: 69.375rem) {
+  .features__card--red {
+    grid-area: teamBuilder;
+  }
+}
+.features__card--orange {
+  border-top: 5px solid #fcaf4a;
+}
+@media (min-width: 69.375rem) {
+  .features__card--orange {
+    grid-area: karma;
+  }
+}
+.features__card--blue {
+  border-top: 5px solid #549ef2;
+}
+@media (min-width: 69.375rem) {
+  .features__card--blue {
+    grid-area: calculator;
+  }
+}
+.features__heading {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+@media (min-width: 46.875rem) {
+  .features__heading {
+    font-size: 1.375rem;
+    margin-bottom: 0.5rem;
+  }
+}
+.features__content {
+  font-size: 0.875rem;
+  margin-bottom: 1.75rem;
+  max-width: 40ch;
+  line-height: 1.8;
+}
+@media (min-width: 69.375rem) {
+  .features__content {
+    font-size: 0.8125rem;
+  }
+}
+.features__icon {
+  align-self: flex-end;
+  margin-top: auto;
+}
+
+.attribution {
+  text-align: center;
+  color: #a3a5ae;
+  font-size: 1rem;
+  padding: 1rem;
+}
+.attribution a {
+  transition: color 0.2s;
+  padding-bottom: 2px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.attribution a:link, .attribution a:visited {
+  color: #549ef2;
+  box-shadow: 0 2px 0 0 #549ef2;
+}
+.attribution a:active, .attribution a:hover {
+  color: #1176e8;
+  box-shadow: none;
+}
+.attribution span {
+  color: #f00000;
+  font-size: 1.25rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,202 @@
+// Function
+@function rem($px, $root: 16px) {
+  @return ($px / $root) * 1rem;
+}
+
+// Variables
+$color-red: hsl(0, 78%, 62%);
+$color-cyan: hsl(180, 62%, 55%);
+$color-orange: hsl(34, 97%, 64%);
+$color-blue: hsl(212, 86%, 64%);
+
+$text_main: hsl(229, 6%, 66%);
+$text-secondary: hsl(234, 12%, 34%);
+
+$bg_main: hsl(0, 0%, 98%);
+$bg_secondary: hsl(0, 0%, 100%);
+
+$break-m: rem(750px);
+$break-l: rem(1110px);
+
+
+
+/* Reset ---------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base ---------------*/
+body {
+  background: $bg_main;
+  font-family: 'Poppins', sans-serif;
+  font-size: rem(15px);
+  font-weight: 400;
+  color: $text_secondary;
+}
+
+p {
+  color: $text_main;
+}
+
+/* Components ---------------*/
+main {
+  padding: rem(80px) 0;
+  width: 85%;
+  max-width: rem(1110px);
+  margin: 0 auto;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: rem(75px);
+
+  &__heading {
+    font-size: rem(26px);
+    line-height: 1.3;
+    margin-bottom: rem(16px);
+
+    @media (min-width: $break-m) {
+      font-size: rem(32px);
+    }
+
+    @media (min-width: $break-l) {
+      font-size: rem(36px);
+    }
+
+    span {
+      font-weight: 200;
+      display: block;
+    }
+  }
+
+  &__leading {
+    font-size: rem(16px);
+    margin: auto;
+    max-width: 54ch;
+  }
+}
+
+.features {
+  display: grid;
+  gap: rem(25px);
+  grid-template-areas: "supervisor"
+                       "teamBuilder"
+                       "karma"
+                       "calculator";
+  justify-content: center;
+
+  @media (min-width: $break-m) {
+    justify-items: center;
+    grid-template-areas: "supervisor teamBuilder"
+                         "karma calculator";
+  }
+
+  @media (min-width: $break-l) {
+    gap: rem(30px);
+    grid-template-areas: "... teamBuilder ..."
+                         "supervisor teamBuilder calculator"
+                         "supervisor karma calculator"
+                         "... karma ...";
+  }
+
+  &__card {
+    overflow: hidden;
+    border-radius: 10px;
+    padding: rem(32px);
+    background-color: $bg_secondary;
+    box-shadow: 0 10px 20px rgba(0,0,0,.1);
+    display: flex;
+    flex-direction: column;
+
+    &--cyan {
+      border-top: 5px solid $color-cyan;
+
+      @media (min-width: $break-l) {
+        grid-area: supervisor;
+      }
+    }
+
+    &--red {
+      border-top: 5px solid $color-red;
+
+      @media (min-width: $break-l) {
+        grid-area: teamBuilder;
+      }
+    }
+
+    &--orange {
+      border-top: 5px solid $color-orange;
+
+      @media (min-width: $break-l) {
+        grid-area: karma;
+      }
+    }
+
+    &--blue {
+      border-top: 5px solid $color-blue;
+
+      @media (min-width: $break-l) {
+        grid-area: calculator;
+      }
+    }
+  }
+
+  &__heading {
+    font-size: rem(20px);
+    margin-bottom: rem(4px);
+
+    @media (min-width: $break-m) {
+      font-size: rem(22px);
+      margin-bottom: rem(8px);
+    }
+  }
+
+  &__content {
+    font-size: rem(14px);
+    margin-bottom: rem(28px);
+    max-width: 40ch;
+    line-height: 1.8;
+
+    @media (min-width: $break-l) {
+      font-size: rem(13px);
+    }
+  }
+
+  &__icon {
+    align-self: flex-end;
+    margin-top: auto;
+  }
+}
+
+.attribution {
+  text-align: center;
+  color: $text_main;
+  font-size: rem(16px);
+  padding: rem(16px);
+
+  a {
+    transition: color .2s;
+    padding-bottom: 2px;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:link,
+    &:visited {
+      color: $color-blue;
+      box-shadow: 0 2px 0 0 $color-blue;
+    }
+
+    &:active,
+    &:hover {
+      color: darken($color-blue, 15%);
+      box-shadow: none;
+    }
+  }
+
+  span {
+    color: hsl(0, 100%, 47%);
+    font-size: rem(20px);
+  }
+}
