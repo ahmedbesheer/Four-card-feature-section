@@ -1,69 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <title>Frontend Mentor | Four card feature section</title>
 
-  <title>Frontend Mentor | Four card feature section</title>
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap">
 
-  <!-- Poppins Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <main>
+      <div class="intro">
+        <h1 class="intro__heading">
+          <span>Reliable, efficient delivery</span>
+          Powered by Technology
+        </h1>
+        <p class="intro__leading">
+          Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is
+          successful
+        </p>
+      </div>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
+      <section class="features">
+        <div class="features__card features__card--cyan">
+          <h2 class="features__heading">Supervisor</h2>
+          <p class="features__content">Monitors activity to identify project roadblocks</p>
+          <img class="features__icon" src="img/icon-supervisor.svg" alt="" draggable="false" aria-hidden="true">
+        </div>
+        <div class="features__card features__card--red">
+          <h2 class="features__heading">Team Builder</h2>
+          <p class="features__content">Scans our talent network to create the optimal team for your project</p>
+          <img class="features__icon" src="img/icon-team-builder.svg" alt="" draggable="false" aria-hidden="true">
+        </div>
+        <div class="features__card features__card--orange">
+          <h2 class="features__heading">Karma</h2>
+          <p class="features__content">Regularly evaluates our talent to ensure quality</p>
+          <img class="features__icon" src="img/icon-karma.svg" alt="" draggable="false" aria-hidden="true">
+        </div>
+        <div class="features__card features__card--blue">
+          <h2 class="features__heading">Calculator</h2>
+          <p class="features__content">Uses data from past projects to provide better delivery estimates</p>
+          <img class="features__icon" src="img/icon-calculator.svg" alt="" draggable="false" aria-hidden="true">
+        </div>
+      </section>
 
-<body>
-
-  <main>
-    <div class="intro">
-      <h1 class="intro__heading">
-        <span>Reliable, efficient delivery</span>
-        Powered by Technology
-      </h1>
-      <p class="intro__leading">
-        Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is
-        successful
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenged by
+        <a href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor</a>. Coded with <span>&hearts;</span> by
+        <a href="https://github.com/ahmedbesheer" target="_blank">Ahmed Besheer</a>.
       </p>
-    </div>
-
-    <section class="features">
-      <div class="features__card features__card--cyan">
-        <h3 class="features__heading">Supervisor</h3>
-        <p class="features__content">Monitors activity to identify project roadblocks</p>
-        <img class="features__icon" src="img/icon-supervisor.svg" alt="" draggable="false" aria-hidden="true">
-      </div>
-      <div class="features__card features__card--red">
-        <h3 class="features__heading">Team Builder</h3>
-        <p class="features__content">Scans our talent network to create the optimal team for your project</p>
-        <img class="features__icon" src="img/icon-team-builder.svg" alt="" draggable="false" aria-hidden="true">
-      </div>
-      <div class="features__card features__card--orange">
-        <h3 class="features__heading">Karma</h3>
-        <p class="features__content">Regularly evaluates our talent to ensure quality</p>
-        <img class="features__icon" src="img/icon-karma.svg" alt="" draggable="false" aria-hidden="true">
-      </div>
-      <div class="features__card features__card--blue">
-        <h3 class="features__heading">Calculator</h3>
-        <p class="features__content">Uses data from past projects to provide better delivery estimates</p>
-        <img class="features__icon" src="img/icon-calculator.svg" alt="" draggable="false" aria-hidden="true">
-      </div>
-    </section>
-
-  </main>
-  <footer>
-    <p class="attribution">
-      Challenged by
-      <a href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor</a>. Coded with <span>&hearts;</span> by
-      <a href="https://github.com/ahmedbesheer" target="_blank">Ahmed Besheer</a>.
-    </p>
-  </footer>
-</body>
-
+    </footer>
+  </body>
 </html>
